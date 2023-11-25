@@ -64,7 +64,7 @@ function App() {
 
             if (profileObj) {
                 const response = await fetch(
-                    `${baseurl}/api/v1/users`,
+                    "https://server-6un4.onrender.com/api/v1/users",
                     {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
@@ -134,7 +134,7 @@ function App() {
             <GlobalStyles styles={{ html: { WebkitFontSmoothing: "auto" } }} />
             <RefineSnackbarProvider>
                 <Refine
-                    dataProvider={dataProvider(`${baseurl}/api/v1`)}
+                    dataProvider={dataProvider("https://server-6un4.onrender.com/api/v1")}
                     notificationProvider={notificationProvider}
                     ReadyPage={ReadyPage}
                     catchAll={<ErrorComponent />}
